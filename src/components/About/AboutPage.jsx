@@ -24,36 +24,36 @@ function AboutPage() {
                                 <h3>Skills</h3>
                                 <Col md={7}>
                                     <li>
-                                        <img height='20px' src={HTML}  alt='l'/><span>HTML5</span>
+                                        <img height='20px' src={HTML} alt='l' /><span>HTML5</span>
                                     </li>
                                     <li>
-                                        <img height='20px' src={CSS}  alt='l'/><span>CSS3</span>
+                                        <img height='20px' src={CSS} alt='l' /><span>CSS3</span>
                                     </li>
                                     <li>
-                                        <img height='20px' src={JS}  alt='l'/><span>Java Script</span>
+                                        <img height='20px' src={JS} alt='l' /><span>Java Script</span>
                                     </li>
                                     <li>
-                                        <img height='20px' src={jQuery}  alt='l'/><span>Java Script</span>
+                                        <img height='20px' src={jQuery} alt='l' /><span>Java Script</span>
                                     </li>
                                     <li>
-                                        <img height='20px' src={Bootstrap}  alt='l'/><span>Bootstrap 5</span>
+                                        <img height='20px' src={Bootstrap} alt='l' /><span>Bootstrap 5</span>
                                     </li>
                                 </Col>
                                 <Col md={5}>
                                     <li>
-                                        <img height='20px' src={ReactImg}  alt='l'/><span>React js</span>
+                                        <img height='20px' src={ReactImg} alt='l' /><span>React js</span>
                                     </li>
                                     <li>
-                                        <img height='20px' src={Git}  alt='l'/><span>Git/Github</span>
+                                        <img height='20px' src={Git} alt='l' /><span>Git/Github</span>
                                     </li>
                                     <li>
-                                        <img height='20px' src={Right}  alt='l'/><span>Redux js</span>
+                                        <img height='20px' src={Right} alt='l' /><span>Redux js</span>
                                     </li>
                                     <li>
-                                        <img height='20px' src={Right}  alt='l'/><span>React-Bootstrap</span>
+                                        <img height='20px' src={Right} alt='l' /><span>React-Bootstrap</span>
                                     </li>
                                     <li>
-                                        <img height='20px' src={Right}  alt='l'/><span>Material-ui</span>
+                                        <img height='20px' src={Right} alt='l' /><span>Material-ui</span>
                                     </li>
                                 </Col>
                             </Row>

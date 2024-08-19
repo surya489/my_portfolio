@@ -9,10 +9,12 @@ function ProjectCard(props) {
     <Card className="project-card-view">
       <Card.Img variant="top" src={props.imgPath} alt="project-card-img" />
       <Card.Body>
-        <Card.Title>{props.title}</Card.Title>
-        <Card.Text style={{ textAlign: "justify" }}>
-          {props.description}
-        </Card.Text>
+        <div>
+          <Card.Title>{props.title}</Card.Title>
+          <Card.Text style={{ textAlign: "justify" }}>
+            {props.description}
+          </Card.Text>
+        </div>
         <Button className="viewbtn" variant="primary" href={props.ghLink} target="_blank">
           View
         </Button>

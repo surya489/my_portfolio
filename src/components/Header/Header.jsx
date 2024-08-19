@@ -1,4 +1,4 @@
-import React, {  useState} from 'react';
+import React, { useState } from 'react';
 
 import { Button } from '@mui/material';
 import Nav from 'react-bootstrap/Nav';
@@ -27,49 +27,51 @@ const Header = () => {
 
   return (
     <Navbar expanded={expand}
-    fixed="top"
-    expand="md"
-    className={navColour ? "sticky" : "navbar"}
+      fixed="top"
+      expand="md"
+      className={navColour ? "sticky" : "navbar"}
     >
-        <Navbar.Brand className='logotext' as={Link} to='/'>
-          <div className='logo'></div>
-        </Navbar.Brand>
-        <Navbar.Toggle 
-          className='navbar-toggler' aria-controls="responsive-navbar-nav"
+      <Navbar.Brand className='logotext' as={Link} to='/'>
+        <span className='logo'>
+          Jaya Surya
+        </span>
+      </Navbar.Brand>
+      <Navbar.Toggle
+        className='navbar-toggler' aria-controls="responsive-navbar-nav"
+        onClick={() => {
+          updateExpanded(expand ? false : "expanded");
+        }}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </Navbar.Toggle >
+      <Navbar.Collapse id="responsive-navbar-nav" className='responsive-navbar justify-content-end'>
+        <Nav defaultActiveKey="#home">
+          <Nav.Item>
+            <Nav.Link as={Link} onClick={() => updateExpanded(false)} to='/' >Home</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link as={Link} onClick={() => updateExpanded(false)} to='/about' >About</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link as={Link} onClick={() => updateExpanded(false)} to='/contact' >Contact</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link as={Link} onClick={() => updateExpanded(false)} to='/project' >Project</Nav.Link>
+          </Nav.Item>
+          <Button
             onClick={() => {
-              updateExpanded(expand ? false : "expanded");
-          }}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </Navbar.Toggle >
-        <Navbar.Collapse id="responsive-navbar-nav" className='responsive-navbar justify-content-end'>
-          <Nav defaultActiveKey="#home">
-            <Nav.Item>
-              <Nav.Link as={Link} onClick={() => updateExpanded(false)} to='/' >Home</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link as={Link} onClick={() => updateExpanded(false)} to='/about' >About</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link as={Link} onClick={() => updateExpanded(false)} to='/contact' >Contact</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link as={Link} onClick={() => updateExpanded(false)} to='/project' >Project</Nav.Link>
-            </Nav.Item>
-            <Button
-            onClick={() => {
-              window.open( Resume );
+              window.open(Resume);
             }}
             className='resumebtn'><span>Resume</span>
           </Button>
 
-          </Nav>
-        </Navbar.Collapse>
-       
+        </Nav>
+      </Navbar.Collapse>
+
     </Navbar>
-    
+
   )
 }
 

@@ -17,9 +17,9 @@ const ContactPage = () => {
         >Say Hello</button>
         <span></span>
         <hr className='line' />
-        <p className='copyright'>© Copyright 2023.
-        <br /> 
-        Designed & Built by <span>jayasurya</span></p>
+        <p className='copyright'>© Copyright {new Date().getFullYear()}.
+          <br />
+          Designed & Built by <span>jayasurya</span></p>
       </Container>
     </Stack>
   )
