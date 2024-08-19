@@ -36,7 +36,7 @@ const HomePage = ({ headerHeight }) => {
                 window.open("https://www.linkedin.com/in/jayasurya4899/");
               }}
               className='socailmediabtn'>
-              <FaLinkedinIn className='icon' />
+              <FaLinkedinIn className='icon linkedin' />
             </button>
 
             <button
