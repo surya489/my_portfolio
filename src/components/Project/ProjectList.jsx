@@ -11,17 +11,17 @@ import YouTubeClone from '../../assets/you_tube_clone.jpg';
 import FitnessGuide from '../../assets/fitness_guide.jpg';
 import BlogSite from '../../assets/blog_site.jpg';
 import EcommerceSite from '../../assets/ecommerce_site.jpg';
-import GlowingFace from '../../assets/glowing_face.jpg';
-import GlowingBall from '../../assets/glowing_ball.jpg'
+// import GlowingFace from '../../assets/glowing_face.jpg';
+// import GlowingBall from '../../assets/glowing_ball.jpg'
 
 import ProjectCard from './ProjectCard';
 
-function Projectlist() {
+function Projectlist({ headerHeight }) {
   return (
     <div className="projectbackground">
       <Container fluid className="project-section">
         <Container>
-          <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Row style={{ justifyContent: "start", paddingBottom: headerHeight, paddingTop: headerHeight + 10 }}>
             <Col md={4} className="project-card">
               <ProjectCard
                 imgPath={YouTubeClone}

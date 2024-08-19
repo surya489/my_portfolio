@@ -31,27 +31,18 @@ const App = () => {
 
 
   return (
-
-    <Stack>
-
-      {/* <motion.div
-          className="cursor"
-          variants={variants}
-          animate="default"
-        /> */}
-
-      <Stack id={load ? "no-scroll" : "scroll"}>
+    <Stack style={{ height: "100%" }}>
+      <Stack id={load ? "no-scroll" : "scroll"} style={{ height: "100%" }}>
         <Router>
           <Preloader load={load} />
           <Routes>
-            <Route path='/' element={<Home />}>hi</Route>
+            <Route path='/' element={<Home />}></Route>
             <Route path='/about' element={<About />}></Route>
             <Route path='/contact' element={<Contact />}></Route>
             <Route path='/project' element={<Project />}></Route>
           </Routes>
         </Router>
       </Stack>
-
     </Stack>
 
   )

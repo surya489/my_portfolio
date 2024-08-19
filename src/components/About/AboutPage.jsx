@@ -12,7 +12,7 @@ import Git from '../../assets/github.png';
 
 function AboutPage({ headerHeight }) {
     return (
-        <div className='aboutpagebackground' style={{ paddingTop: headerHeight + 10 }}>
+        <div className='aboutpagebackground' style={{ paddingTop: headerHeight + 20, paddingBottom: headerHeight }}>
             <Container>
                 <Row className='textbackground'>
                     <Col md={7}>

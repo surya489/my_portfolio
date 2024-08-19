@@ -7,7 +7,7 @@ const About = () => {
   const [headerHeight, setHeaderHeight] = useState(0);
 
   return (
-    <Stack>
+    <Stack style={{ height: "100%" }}>
       <Header setHeaderHeight={setHeaderHeight} />
       <AboutPage headerHeight={headerHeight} />
     </Stack>

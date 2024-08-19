@@ -308,7 +308,7 @@
 
 .aboutpagebackground {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #4158d0;
   background-image: linear-gradient(43deg,
       #4158d0 0%,
@@ -416,8 +416,8 @@
 }
 
 .project-card {
-  padding-top: 20px;
-  padding-bottom: 50px !important;
+  padding-top: 10px;
+  padding-bottom: 10px !important;
   padding-left: 10px !important;
   padding-right: 10px !important;
   height: auto !important;
