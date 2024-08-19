@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import '../../pages/style.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import HTML from '../../assets/html-5.png';
@@ -10,50 +10,51 @@ import ReactImg from '../../assets/physics.png';
 import Right from '../../assets/right.png';
 import Git from '../../assets/github.png';
 
-function AboutPage() {
+function AboutPage({ headerHeight }) {
     return (
-        <div className='aboutpagebackground'>
+        <div className='aboutpagebackground' style={{ paddingTop: headerHeight + 10 }}>
             <Container>
                 <Row className='textbackground'>
-                    <Col md={7} >
+                    <Col md={7}>
                         <h3 className='aboutmetext'>About <span>Me</span></h3>
-                        <p className='aboutdetails'>I'm a self-taught Front End developer from India. I build websites with a focus on providing the experience for everyone using them and responsiveness. Curious to learn more about developing scalable distribution systems, love problem solving, and care about writing and maintainable code. A responsive design makes your website accessible to all users, regardless of their devices.
+                        <p className='aboutdetails'>
+                            I'm a self-taught Front End developer from India. I build websites with a focus on providing the experience for everyone using them and responsiveness. Curious to learn more about developing scalable distribution systems, love problem solving, and care about writing and maintainable code. A responsive design makes your website accessible to all users, regardless of their devices.
                         </p>
                         <ul className='skilllist'>
                             <Row>
                                 <h3>Skills</h3>
                                 <Col md={7}>
                                     <li>
-                                        <img height='20px' src={HTML} alt='l' /><span>HTML5</span>
+                                        <img height='20px' src={HTML} alt='HTML5' /><span>HTML5</span>
                                     </li>
                                     <li>
-                                        <img height='20px' src={CSS} alt='l' /><span>CSS3</span>
+                                        <img height='20px' src={CSS} alt='CSS3' /><span>CSS3</span>
                                     </li>
                                     <li>
-                                        <img height='20px' src={JS} alt='l' /><span>Java Script</span>
+                                        <img height='20px' src={JS} alt='JavaScript' /><span>JavaScript</span>
                                     </li>
                                     <li>
-                                        <img height='20px' src={jQuery} alt='l' /><span>Java Script</span>
+                                        <img height='20px' src={jQuery} alt='jQuery' /><span>jQuery</span>
                                     </li>
                                     <li>
-                                        <img height='20px' src={Bootstrap} alt='l' /><span>Bootstrap 5</span>
+                                        <img height='20px' src={Bootstrap} alt='Bootstrap' /><span>Bootstrap 5</span>
                                     </li>
                                 </Col>
                                 <Col md={5}>
                                     <li>
-                                        <img height='20px' src={ReactImg} alt='l' /><span>React js</span>
+                                        <img height='20px' src={ReactImg} alt='React.js' /><span>React.js</span>
                                     </li>
                                     <li>
-                                        <img height='20px' src={Git} alt='l' /><span>Git/Github</span>
+                                        <img height='20px' src={Git} alt='Git/GitHub' /><span>Git/GitHub</span>
                                     </li>
                                     <li>
-                                        <img height='20px' src={Right} alt='l' /><span>Redux js</span>
+                                        <img height='20px' src={Right} alt='Redux.js' /><span>Redux.js</span>
                                     </li>
                                     <li>
-                                        <img height='20px' src={Right} alt='l' /><span>React-Bootstrap</span>
+                                        <img height='20px' src={Right} alt='React-Bootstrap' /><span>React-Bootstrap</span>
                                     </li>
                                     <li>
-                                        <img height='20px' src={Right} alt='l' /><span>Material-ui</span>
+                                        <img height='20px' src={Right} alt='Material-UI' /><span>Material-UI</span>
                                     </li>
                                 </Col>
                             </Row>
@@ -65,7 +66,7 @@ function AboutPage() {
                 </Row>
             </Container>
         </div>
-    )
+    );
 }
 
-export default AboutPage
+export default AboutPage;

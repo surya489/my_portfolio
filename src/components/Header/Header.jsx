@@ -1,17 +1,14 @@
-import React, { useState } from 'react';
-
+import React, { useState, useRef, useEffect } from 'react';
 import { Button } from '@mui/material';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-
 import { Link } from 'react-router-dom';
-
 import Resume from '../../assets/jaya_surya_resume.pdf';
-
 import '../../pages/style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Header = () => {
+const Header = ({ setHeaderHeight }) => {
+  const headerRef = useRef(null);
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
 
@@ -25,22 +22,20 @@ const Header = () => {
 
   window.addEventListener("scroll", scrollHandler);
 
+  useEffect(() => {
+    if (headerRef.current) {
+      setHeaderHeight(headerRef.current.offsetHeight);
+    }
+  }, [setHeaderHeight]);
+
   return (
-    <Navbar expanded={expand}
-      fixed="top"
-      expand="md"
-      className={navColour ? "sticky" : "navbar"}
-    >
+    <Navbar ref={headerRef} expanded={expand} fixed="top" expand="md" className={navColour ? "sticky" : "navbar"}>
       <Navbar.Brand className='logotext' as={Link} to='/'>
-        <span className='logo'>
-          Jaya Surya
-        </span>
+        <span className='logo'>Jaya Surya</span>
       </Navbar.Brand>
       <Navbar.Toggle
         className='navbar-toggler' aria-controls="responsive-navbar-nav"
-        onClick={() => {
-          updateExpanded(expand ? false : "expanded");
-        }}
+        onClick={() => updateExpanded(expand ? false : "expanded")}
       >
         <span></span>
         <span></span>
@@ -61,18 +56,13 @@ const Header = () => {
             <Nav.Link as={Link} onClick={() => updateExpanded(false)} to='/project' >Project</Nav.Link>
           </Nav.Item>
           <Button
-            onClick={() => {
-              window.open(Resume);
-            }}
+            onClick={() => window.open(Resume)}
             className='resumebtn'><span>Resume</span>
           </Button>
-
         </Nav>
       </Navbar.Collapse>
-
     </Navbar>
-
-  )
+  );
 }
 
 export default Header;
