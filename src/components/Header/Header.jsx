@@ -30,7 +30,7 @@ const Header = ({ setHeaderHeight }) => {
 
   return (
     <Navbar ref={headerRef} expanded={expand} fixed="top" expand="md" className={navColour ? "sticky" : "navbar"}>
-      <Navbar.Brand className='logotext' as={Link} to='/'>
+      <Navbar.Brand className='logotext Comfortaa' as={Link} to='/'>
         <span className='logo'>Jaya Surya</span>
       </Navbar.Brand>
       <Navbar.Toggle

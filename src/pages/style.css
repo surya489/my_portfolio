@@ -1,5 +1,57 @@
-@import url("https://fonts.googleapis.com/css2?family=Exo+2&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Labrada&display=swap");
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('../Fonts/Comfortaa/Comfortaa-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('../Fonts/Nunito/Nunito-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PlayfairDisplay';
+  src: url('../Fonts/playfairDisplay/PlayfairDisplay-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PlayfairDisplayBold';
+  src: url('../Fonts/playfairDisplay/PlayfairDisplay-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../Fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.Comfortaa {
+  font-family: 'Comfortaa';
+}
+
+.Nunito {
+  font-family: 'Nunito';
+}
+
+.PlayfairDisplay {
+  font-family: 'PlayfairDisplay';
+}
+
+.PlayfairDisplayBold {
+  font-family: 'PlayfairDisplayBold';
+}
+
+.Roboto {
+  font-family: 'Roboto';
+}
 
 /* Header style */
 
@@ -80,13 +132,36 @@
   height: 120px;
 } */
 
+.logotext {
+  text-shadow: 4px 2px 7px #000;
+  color: #fff !important;
+  letter-spacing: 1.5px;
+  transition: all .5s
+}
+
+.logotext:hover {
+  /* color: #000 !important; */
+  text-shadow: 4px 2px 7px #fff;
+}
+
+.navbar-nav .nav-item {
+  padding-right: 1.5rem !important;
+  padding-left: 0 !important;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
 .navbar-nav .nav-link {
+  font-family: 'Comfortaa';
   color: white !important;
   font-size: 16px !important;
   letter-spacing: 1px;
   font-weight: 500 !important;
-  padding-right: 1rem !important;
-  padding-left: 1.5rem !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  transition: all .5s;
 }
 
 .navbar-nav .nav-link:hover {
@@ -94,6 +169,7 @@
 }
 
 .resumebtn {
+  font-family: 'Comfortaa' !important;
   margin-left: 30px;
   border-radius: 25px !important;
   padding: 0 25px !important;
@@ -103,6 +179,11 @@
   border: none;
   letter-spacing: 1.5px !important;
   color: #fff !important;
+  transition: all .5s;
+}
+
+.resumebtn:hover {
+  background-image: linear-gradient(-43deg, #4158d0 0%, #c850c0 100%);
 }
 
 @media (max-width: 767px) {
@@ -209,29 +290,37 @@
 
 .Typewriter__wrapper {
   font-size: 2.0em !important;
-  color: #191919 !important;
+  color: #FFF !important;
   font-weight: 600 !important;
-  letter-spacing: 1px !important;
+  letter-spacing: 0.3rem !important;
+  font-family: 'Nunito';
+  line-height: 1.2;
 }
 
 .Typewriter__cursor {
   font-size: 2.4em !important;
-  color: #191919 !important;
+  color: #fff !important;
 }
 
 .headtext {
   padding-top: 120px;
   font-size: 2.4em !important;
-  color: #191919 !important;
+  color: #fff !important;
   font-weight: 600 !important;
   letter-spacing: 1px !important;
+  line-height: 1.2;
+}
+
+.Typewriter {
+  line-height: 1.2;
 }
 
 .nametext {
   font-size: 2.0em !important;
-  color: #191919 !important;
+  color: #fff !important;
   font-weight: 600 !important;
   letter-spacing: 1px !important;
+  line-height: 1.2;
 }
 
 .imagedeveloper {
@@ -245,29 +334,49 @@
 
 .socailmediabtn {
   margin-top: 2rem;
-  width: 90px;
-  height: 45px;
-  background-color: transparent;
-  border: none;
   width: 40px;
   height: 40px;
+  background-color: transparent;
+  border: none;
   border-radius: 50%;
   margin-right: 20px;
-  transition: all .5s;
+  position: relative;
+  overflow: hidden;
+  transition: all .3s;
 }
 
 .socailmediabtn:last-child {
   margin-right: 0px;
 }
 
+.socailmediabtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
+  opacity: 0;
+  z-index: 1;
+  border-radius: 50%;
+  transition: all .3s;
+}
+
+.socailmediabtn:hover::before {
+  opacity: 1;
+}
+
 .socailmediabtn:hover {
   background-color: antiquewhite;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
-  opacity: 0.6;
 }
 
 .icon {
   font-size: 30px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
 }
 
 .icon.linkedin {
@@ -326,7 +435,6 @@
       #4158d0 0%,
       #c850c0 46%,
       #ffcc70 100%);
-  padding-top: 110px;
 }
 
 .textbackground {
@@ -370,12 +478,14 @@
 .skilllist li {
   cursor: default;
   letter-spacing: 1px;
-  font-family: "Exo 2", sans-serif;
+  font-family: "Nunito";
   list-style-type: none;
   display: flex;
   gap: 1rem;
   margin-bottom: 10px;
   align-items: center;
+  width: max-content;
+  transition: all .5s !important;
 }
 
 .skilllist {

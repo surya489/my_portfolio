@@ -1,20 +1,10 @@
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
 import './App.css';
-
 import { Stack } from '@mui/material';
-// import { motion } from 'framer-motion';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 import { Home, Contact, Project, About } from './pages/index';
-import Preloader from '../src/components/Pre'
-
-// import Home from './pages/Home';
-// import Contact from './pages/Contact'
-
+import Preloader from '../src/components/Pre';
 
 const App = () => {
 

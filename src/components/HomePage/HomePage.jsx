@@ -18,8 +18,8 @@ const HomePage = ({ headerHeight }) => {
       <Container>
         <Row style={{ paddingTop: headerHeight + 10 }}>
           <Col md={7}>
-            <h2 className='headtext'>Hello <span className='wave'>👋 </span></h2>
-            <h2 className='nametext'>I'm Jaya Surya</h2>
+            <h2 className='headtext PlayfairDisplayBold'>Hello <span className='wave'>👋 </span></h2>
+            <h2 className='nametext PlayfairDisplayBold'>I'm Jaya Surya</h2>
             <span></span>
             <Text />
             <button

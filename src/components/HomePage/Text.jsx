@@ -4,17 +4,17 @@ import Typewriter from "typewriter-effect";
 
 const Text = () => {
   return (
-   <Typewriter 
-    options={{
+    <Typewriter
+      options={{
         strings: [
-            "React Js Developer",
-            "Front End Developer"
+          "React Js Developer",
+          "Front-end Developer"
         ],
         autoStart: true,
         loop: true,
         deleteSpeed: 50
-    }}
-   />
+      }}
+    />
   )
 }
 
